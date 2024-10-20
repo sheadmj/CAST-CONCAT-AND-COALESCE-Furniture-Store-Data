@@ -3,7 +3,7 @@
 
 
 <h2>Description</h2>
-Using SQL to clean automobile data. Data obtained through Google Data Analytics Certificate program.
+Using SQL to clean furniture store data. The furniture store owner has asked us to look at purchases that occurred during their sales promotion period in December. Data obtained through Google Data Analytics Certificate program.  
 <br />
 
 
