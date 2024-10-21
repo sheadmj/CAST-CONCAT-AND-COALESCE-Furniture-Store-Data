@@ -9,14 +9,14 @@ Using SQL to clean furniture store data. The furniture store owner has asked us 
 
 <h2>SQL FUNCTIONS AND COMMANDS USED</h2>
 
-- <b>DISTINCT</b> 
-- <b>MIN</b>
-- <b>MAX</b>
-- <b>AS</b>
-- <b>WHERE</b>
-- <b>SET</b>
-- <b>AND</b>
-- <b>UPDATE</b>
+- <b>CAST</b> 
+- <b>BETWEEN</b>
+- <b>ORDER BY</b>
+- <b>ASC</b>
+- <b>DESC</b>
+- <b>CONCAT</b>
+- <b>COALESCE</b>
+
 
 <h2>Environment Used </h2>
 
@@ -25,18 +25,16 @@ Using SQL to clean furniture store data. The furniture store owner has asked us 
 <h2>Walk-through:</h2>
 
 <p align="center">
-1. Confirm column "fuel_type" doesn't have any unexpected values. Expected values = 2: Gas and Diesel.  <br/>
-<img src="https://i.imgur.com/Oa5wzBu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+1. used CAST to transform column named "date" which was incorrectly typed as a DATETIME datatype. Order purchases ascending by order data.   <br/>
+<img src="https://i.imgur.com/9p1N7UA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-2. Inspect the length column. The "length" column contains the lengths of the cars. Lengths should range 141.1-208.1.  <br/>
-<img src="https://i.imgur.com/ImsUqrM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+2. Determine if customers prefer one couch color over others. Use CONCAT to create a unique key. <br/>
+<img src="https://i.imgur.com/R1nUjXJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-3. Check Data for Null values. Discovered null value in column "num_of_doors". <br/>
-<img src="https://i.imgur.com/OltOqpI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+3. In rows where the "product" column is null, use COALESCE to display "product code" instead. <br/>
+<img src="https://i.imgur.com/w31wkMO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-4. Update Missing Data. We know that all Mazda diesel sedans sold had 4 doors. <br/>
-<img src="https://i.imgur.com/YbQ0lSE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
+
